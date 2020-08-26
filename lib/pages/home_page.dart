@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: Container(
-        color: Colors.grey,
+        color: Colors.grey[300],
         child: Column(
           children: [
             Container(
@@ -152,39 +152,87 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(height: 8,),
                   Container(
                     padding: EdgeInsets.all(16),
-                    height: 320,
                     color: Colors.white,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Deal of the Day",style: TextStyle(color: Colors.black,fontSize: 22),)
+                        Text("Deal of the Day",style: TextStyle(color: Colors.black,fontSize: 22),),
+                        SizedBox(height: 16,),
+                        Image(
+                          width: double.infinity,
+                          height: 240,
+                          image: AssetImage("assets/images/item_7.jpeg"),
+                          fit: BoxFit.cover,
+                        ),
+                        SizedBox(height: 16,),
+                        Text("Up to 31% off APC UPS Battery Back",style: TextStyle(fontSize: 17),),
+                        SizedBox(height: 6,),
+                        Text("\$10.99 - \$79.9",style: TextStyle(fontSize: 17),),
                       ],
                     ),
                   ),
                   SizedBox(height: 8,),
                   Container(
                     padding: EdgeInsets.all(16),
-                    height: 320,
                     color: Colors.white,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Best sellers in Electronics",style: TextStyle(color: Colors.black,fontSize: 22),)
+                        Text("Best sellers in Electronics",style: TextStyle(color: Colors.black,fontSize: 22),),
+
+                        SizedBox(height: 16,),
+                        Container(
+                          height: MediaQuery.of(context).size.width,
+                          child: Row(
+                            children: [
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Image(
+                                        image: AssetImage("assets/images/item_7.jpeg"),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5,),
+                                    Expanded(
+                                      child: Image(
+                                        image: AssetImage("assets/images/item_6.jpeg"),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(width: 5,),
+                              Expanded(
+                                child: Column(
+                                  children: [
+                                    Expanded(
+                                      child: Image(
+                                        image: AssetImage("assets/images/item_5.jpeg"),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                    SizedBox(height: 5,),
+                                    Expanded(
+                                      child: Image(
+                                        image: AssetImage("assets/images/item_4.jpeg"),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
                   SizedBox(height: 8,),
-                  Container(
-                    padding: EdgeInsets.all(16),
-                    height: 320,
-                    color: Colors.white,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text("Top products in Camera",style: TextStyle(color: Colors.black,fontSize: 22),)
-                      ],
-                    ),
-                  ),
+
                 ],
               ),
             ),
